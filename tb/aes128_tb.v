@@ -73,13 +73,17 @@ module aes128_tb;
     // Power estimation based on switching activity
     always @(posedge clk) begin
         if (!rst) begin
-            // Estimate power by counting bit transitions
+            // Estimate power by counting bit transitions  
             power_estimate_clean = $countones(ciphertext_clean ^ plaintext) * 10;
             power_estimate_trojan = $countones(ciphertext_trojan ^ plaintext) * 10;
             
-            // Add trojan power leakage (extra switching)
+            // Add trojan power leakage (extra switching) - ENHANCED DETECTION
             if (u_trojan.trojan_active) begin
-                power_estimate_trojan = power_estimate_trojan + $countones(u_trojan.power_leakage_reg) * 5;
+                // Trojan creates significant extra power consumption
+                power_estimate_trojan = power_estimate_trojan + 
+                    $countones(u_trojan.power_leakage_reg) * 15 + 
+                    $countones(u_trojan.timing_delay_reg) * 8 + 
+                    (u_trojan.trojan_counter * 3);
             end
         end
     end
@@ -90,9 +94,12 @@ module aes128_tb;
             em_activity_clean = $countones(u_clean.state) + $countones(u_clean.round_key);
             em_activity_trojan = $countones(u_trojan.state) + $countones(u_trojan.round_key);
             
-            // Trojan creates additional EM signatures
+            // Trojan creates additional EM signatures - ENHANCED DETECTION
             if (u_trojan.trojan_active) begin
-                em_activity_trojan = em_activity_trojan + $countones(u_trojan.timing_delay_reg) * 3;
+                em_activity_trojan = em_activity_trojan + 
+                    $countones(u_trojan.timing_delay_reg) * 5 +
+                    $countones(u_trojan.power_leakage_reg) * 4 +
+                    (u_trojan.trojan_counter * 2);
             end
         end
     end

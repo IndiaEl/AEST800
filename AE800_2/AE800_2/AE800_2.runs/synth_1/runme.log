@@ -1,0 +1,485 @@
+
+*** Running vivado
+    with args -log aes_harness_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source aes_harness_top.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source aes_harness_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ielkhazin/Downloads/AE800_2/AE800_2/AE800_2.srcs/utils_1/imports/synth_1/cw305_aes_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ielkhazin/Downloads/AE800_2/AE800_2/AE800_2.srcs/utils_1/imports/synth_1/cw305_aes_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top aes_harness_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 27360
+WARNING: [Synth 8-2254] instance name 't0' matches net/port name [C:/Users/ielkhazin/Downloads/AE800_2/round.v:22]
+INFO: [Synth 8-6826] previous declaration of 't0' is from here [C:/Users/ielkhazin/Downloads/AE800_2/round.v:8]
+WARNING: [Synth 8-2254] instance name 't0' matches net/port name [C:/Users/ielkhazin/Downloads/AE800_2/table.v:11]
+INFO: [Synth 8-6826] previous declaration of 't0' is from here [C:/Users/ielkhazin/Downloads/AE800_2/table.v:8]
+WARNING: [Synth 8-2254] instance name 't1' matches net/port name [C:/Users/ielkhazin/Downloads/AE800_2/table.v:12]
+INFO: [Synth 8-6826] previous declaration of 't1' is from here [C:/Users/ielkhazin/Downloads/AE800_2/table.v:8]
+WARNING: [Synth 8-2254] instance name 't2' matches net/port name [C:/Users/ielkhazin/Downloads/AE800_2/table.v:13]
+INFO: [Synth 8-6826] previous declaration of 't2' is from here [C:/Users/ielkhazin/Downloads/AE800_2/table.v:8]
+WARNING: [Synth 8-2254] instance name 't3' matches net/port name [C:/Users/ielkhazin/Downloads/AE800_2/table.v:14]
+INFO: [Synth 8-6826] previous declaration of 't3' is from here [C:/Users/ielkhazin/Downloads/AE800_2/table.v:8]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2303.375 ; gain = 410.637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'aes_harness_top' [C:/Users/ielkhazin/Downloads/AE800_2/aes_harness_top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'aes_128' [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:5]
+INFO: [Synth 8-6157] synthesizing module 'expand_key_128' [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:54]
+INFO: [Synth 8-6157] synthesizing module 'S4' [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:81]
+INFO: [Synth 8-6157] synthesizing module 'S' [C:/Users/ielkhazin/Downloads/AE800_2/table.v:39]
+INFO: [Synth 8-226] default block is never used [C:/Users/ielkhazin/Downloads/AE800_2/table.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'S' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/table.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'S4' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:81]
+INFO: [Synth 8-6157] synthesizing module 'rcon' [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'rcon' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'expand_key_128' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:54]
+INFO: [Synth 8-6157] synthesizing module 'one_round' [C:/Users/ielkhazin/Downloads/AE800_2/round.v:3]
+INFO: [Synth 8-6157] synthesizing module 'table_lookup' [C:/Users/ielkhazin/Downloads/AE800_2/table.v:6]
+INFO: [Synth 8-6157] synthesizing module 'T' [C:/Users/ielkhazin/Downloads/AE800_2/table.v:22]
+INFO: [Synth 8-6157] synthesizing module 'xS' [C:/Users/ielkhazin/Downloads/AE800_2/table.v:115]
+INFO: [Synth 8-226] default block is never used [C:/Users/ielkhazin/Downloads/AE800_2/table.v:120]
+INFO: [Synth 8-6155] done synthesizing module 'xS' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/table.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'T' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/table.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'table_lookup' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/table.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'one_round' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/round.v:3]
+INFO: [Synth 8-6157] synthesizing module 'final_round' [C:/Users/ielkhazin/Downloads/AE800_2/round.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'final_round' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/round.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'aes_128' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'aes_harness_top' (0#1) [C:/Users/ielkhazin/Downloads/AE800_2/aes_harness_top.v:9]
+WARNING: [Synth 8-6014] Unused sequential element captured_output_reg was removed.  [C:/Users/ielkhazin/Downloads/AE800_2/aes_harness_top.v:89]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2397.262 ; gain = 504.523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2415.172 ; gain = 522.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2415.172 ; gain = 522.434
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 2415.172 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ielkhazin/Downloads/AE800_2/aes_harness.xdc]
+Finished Parsing XDC File [C:/Users/ielkhazin/Downloads/AE800_2/aes_harness.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ielkhazin/Downloads/AE800_2/aes_harness.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/aes_harness_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/aes_harness_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2527.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2527.883 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/ielkhazin/Downloads/AE800_2/AE800_2/AE800_2.srcs/utils_1/imports/synth_1/cw305_aes_top.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 90    
++---Registers : 
+	              128 Bit    Registers := 4     
+	               32 Bit    Registers := 164   
+	                8 Bit    Registers := 10    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 3     
+	   2 Input  126 Bit        Muxes := 2     
+	   2 Input  113 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 10    
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3936] Found unconnected internal register 'w3_reg_rep' and it is trimmed from '32' to '8' bits. [C:/Users/ielkhazin/Downloads/AE800_2/aes_128.v:62]
+WARNING: [Synth 8-3936] Found unconnected internal register 's3_reg_rep' and it is trimmed from '32' to '8' bits. [C:/Users/ielkhazin/Downloads/AE800_2/round.v:15]
+WARNING: [Synth 8-3936] Found unconnected internal register 's2_reg' and it is trimmed from '32' to '8' bits. [C:/Users/ielkhazin/Downloads/AE800_2/round.v:14]
+WARNING: [Synth 8-3936] Found unconnected internal register 's1_reg_rep' and it is trimmed from '32' to '8' bits. [C:/Users/ielkhazin/Downloads/AE800_2/round.v:13]
+WARNING: [Synth 8-3936] Found unconnected internal register 's0_reg_rep' and it is trimmed from '32' to '8' bits. [C:/Users/ielkhazin/Downloads/AE800_2/round.v:12]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+-----------------+---------------+----------------+
+|Module Name    | RTL Object      | Depth x Width | Implemented As | 
++---------------+-----------------+---------------+----------------+
+|S              | s               | 256x8         | LUT            | 
+|xS             | s               | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep      | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t0__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s0_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t1__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s1_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t2__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s2_reg          | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep      | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t1__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s1_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t2__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s2_reg          | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t0__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s0_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t1__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg          | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep      | 256x8         | Block RAM      | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t2__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s2_reg          | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t0__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s0_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t1__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s1_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t2__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s2_reg          | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s3_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep      | 256x8         | Block RAM      | 
+|one_round      | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|expand_key_128 | w3_reg_rep_bsel | 256x8         | Block RAM      | 
+|one_round      | t0/t3__0/m2/s   | 256x8         | LUT            | 
+|final_round    | s2_reg_rep      | 256x8         | Block RAM      | 
+|final_round    | s1_reg_rep_bsel | 256x8         | Block RAM      | 
+|final_round    | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|final_round    | s1_reg_rep      | 256x8         | Block RAM      | 
+|final_round    | s0_reg_rep_bsel | 256x8         | Block RAM      | 
+|final_round    | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|final_round    | s3_reg_rep_bsel | 256x8         | Block RAM      | 
+|final_round    | s2_reg_rep_bsel | 256x8         | Block RAM      | 
+|final_round    | s3_reg          | 256x8         | Block RAM      | 
+|final_round    | s2_reg_rep_bsel | 256x8         | Block RAM      | 
++---------------+-----------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance uut/a1/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a1/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a1/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a1/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r1/s1_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r1/s1_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a2/w3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a2/w3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a2/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a2/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a3/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a3/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a3/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a3/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r3/s3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r3/s3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a4/w3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a4/w3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a4/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a4/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a5/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a5/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a5/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a5/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r5/s1_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r5/s1_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a6/w3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a6/w3_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a6/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a6/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a7/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a7/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a7/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a7/w3_reg_rep_bsel__0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a8/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/a8/w3_reg_rep_bsel (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r8/s0_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r8/s0_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance uut/r9/s1_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|aes_harness_top | uut/r9/k2_reg[7] | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
+|aes_harness_top | uut/rf/k3_reg[3] | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
++----------------+------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |LUT2     |   908|
+|3     |LUT3     |    62|
+|4     |LUT4     |    35|
+|5     |LUT5     |    14|
+|6     |LUT6     |     5|
+|7     |RAMB18E1 |    20|
+|9     |SRL16E   |     8|
+|10    |FDCE     |    22|
+|11    |FDRE     |  1866|
+|12    |FDSE     |     7|
+|13    |IBUF     |     6|
+|14    |OBUF     |     5|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 2527.883 ; gain = 522.434
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2527.883 ; gain = 635.145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2527.883 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2527.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6a1de05e
+INFO: [Common 17-83] Releasing license: Synthesis
+86 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 2527.883 ; gain = 1032.750
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ielkhazin/Downloads/AE800_2/AE800_2/AE800_2.runs/synth_1/aes_harness_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file aes_harness_top_utilization_synth.rpt -pb aes_harness_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov 10 12:37:17 2025...

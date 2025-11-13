@@ -1,0 +1,15 @@
+{
+  "n_traces": 500,
+  "ok": 0,
+  "timeouts": 500,
+  "adc_samples": 1000,
+  "adc_freq": 98287479.0,
+  "gain_db": 45.0,
+  "decimate": 1,
+  "trigger_line": "tio4",
+  "trigger_edge": "rising",
+  "bitfile": "C:\\Users\\ielkhazin\\Downloads\\AE800_2\\AE800_2\\AE800_2.runs\\impl_1\\cw305_aes_top.bit",
+  "clock_setup": "pll_mclk",
+  "fixed_plaintext": "3243f6a8885a308d313198a2e0370734",
+  "fixed_key": "2b7e151628aed2a6abf7158809cf4f3c"
+}

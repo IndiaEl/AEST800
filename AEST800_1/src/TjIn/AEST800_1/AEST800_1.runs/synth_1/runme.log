@@ -1,0 +1,147 @@
+
+*** Running vivado
+    with args -log cw305_aes_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cw305_aes_top.tcl
+
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source cw305_aes_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/AEST800_1/AEST800_1.srcs/utils_1/imports/synth_1/cw305_aes_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/AEST800_1/AEST800_1.srcs/utils_1/imports/synth_1/cw305_aes_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top cw305_aes_top -part xc7a100tftg256-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tftg256-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 35528
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2305.836 ; gain = 410.914
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cw305_aes_top' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/cw305_aes_top.v:12]
+INFO: [Synth 8-6157] synthesizing module 'aes_128' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/aes_128.v:17]
+INFO: [Synth 8-6157] synthesizing module 'expand_key_128' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/aes_128.v:59]
+INFO: [Synth 8-6157] synthesizing module 'S4' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:32]
+INFO: [Synth 8-6157] synthesizing module 'S' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'S' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'S4' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'expand_key_128' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/aes_128.v:59]
+INFO: [Synth 8-6157] synthesizing module 'one_round' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/round.v:18]
+INFO: [Synth 8-6157] synthesizing module 'table_lookup' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:17]
+INFO: [Synth 8-6157] synthesizing module 'T' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:45]
+INFO: [Synth 8-6157] synthesizing module 'xS' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:326]
+INFO: [Synth 8-6155] done synthesizing module 'xS' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:326]
+INFO: [Synth 8-6155] done synthesizing module 'T' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'table_lookup' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/table.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'one_round' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/round.v:18]
+INFO: [Synth 8-6157] synthesizing module 'final_round' [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/round.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'final_round' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/round.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'aes_128' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/aes_128.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'cw305_aes_top' (0#1) [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/cw305_aes_top.v:12]
+WARNING: [Synth 8-6014] Unused sequential element captured_output_reg was removed.  [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/cw305_aes_top.v:99]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2400.207 ; gain = 505.285
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2418.105 ; gain = 523.184
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2418.105 ; gain = 523.184
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 2418.105 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/cw305_aes.xdc]
+Finished Parsing XDC File [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/cw305_aes.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ielkhazin/Downloads/AEST800_1/src/TjIn/cw305_aes.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cw305_aes_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cw305_aes_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2530.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2530.859 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2530.859 ; gain = 635.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tftg256-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2530.859 ; gain = 635.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2530.859 ; gain = 635.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2530.859 ; gain = 635.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
++---XORs : 
+	   2 Input    128 Bit         XORs := 1     
+	   2 Input     32 Bit         XORs := 74    
+	   5 Input     32 Bit         XORs := 36    
+	   2 Input      8 Bit         XORs := 154   
++---Registers : 
+	              128 Bit    Registers := 24    
+	               32 Bit    Registers := 40    
+	                8 Bit    Registers := 344   
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 1     
++---ROMs : 
+	                    ROMs := 344   
++---Muxes : 
+	   2 Input  128 Bit        Muxes := 3     
+	   2 Input  126 Bit        Muxes := 2     
+	   2 Input  113 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 2530.859 ; gain = 635.938
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5835] Resources of type BRAM have been overutilized. Used = 285, Available = 270. Will try to implement using LUT-RAM. 

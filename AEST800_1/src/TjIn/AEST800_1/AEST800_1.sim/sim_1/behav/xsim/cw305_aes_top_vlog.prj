@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../aes_128.v" \
+"../../../../../round.v" \
+"../../../../../table.v" \
+"../../../../../cw305_aes_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
